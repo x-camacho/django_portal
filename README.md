@@ -18,7 +18,7 @@ Wire Frames
 
 <img width="610" alt="Screen Shot 2022-03-30 at 9 06 15 PM" src="https://user-images.githubusercontent.com/94874302/160974416-a2c63d92-de85-4f38-873e-ec3c16236056.png">
 
-<img width="316" alt="Screen Shot 2022-03-30 at 9 06 40 PM" src="https://user-images.githubusercontent.com/94874302/160974450-f2398e22-3060-4285-9768-7fe3bad83df8.png">
+<img width="630" alt="Screen Shot 2022-03-30 at 9 10 32 PM" src="https://user-images.githubusercontent.com/94874302/160974835-e5e08efc-cddd-4136-8d72-7f8fedef3e4b.png">
 
 <img width="541" alt="Screen Shot 2022-03-30 at 9 09 07 PM" src="https://user-images.githubusercontent.com/94874302/160974702-10f5d6a6-2ea1-4e3c-bb51-04947768abfa.png">
 
