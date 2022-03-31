@@ -1,24 +1,26 @@
 # Your Portal!
 
-### About
+## About
 
 Your Portal! is the one stop shop application to manage all of your locations in one location.  Add managers, locations, and reports to your growing business.  Keep track of your locations and who is responsible for them.  In addition, attach reports tied to each location for further review!
 
-### Table of Contents
+## Table of Contents
 
-ERD's. || User Stories || Wire Frames || Technologies || Existing Issues || Future Enhancements
+[ERD]
+(https://github.com/x-camacho/django_portal/#ERD)
+|
 
-ERD
+## ERD
 
 <img width="533" alt="Screen Shot 2022-03-30 at 8 33 09 PM" src="https://user-images.githubusercontent.com/94874302/160971081-9aa563d2-c603-483a-9493-cca841598ed6.png">
 
 
-User Stories
+## User Stories
 
 <img width="630" alt="Screen Shot 2022-03-30 at 8 33 50 PM" src="https://user-images.githubusercontent.com/94874302/160971165-482171ad-4859-423d-9681-3913a57b55e1.png">
 
 
-Wire Frames
+## Wire Frames
 
 <img width="610" alt="Screen Shot 2022-03-30 at 9 06 15 PM" src="https://user-images.githubusercontent.com/94874302/160974416-a2c63d92-de85-4f38-873e-ec3c16236056.png">
 
