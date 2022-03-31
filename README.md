@@ -12,12 +12,11 @@ Your Portal! is the one stop shop application to manage all of your locations in
 
 ## ERD
 
-<img width="533" alt="Screen Shot 2022-03-30 at 8 33 09 PM" src="https://user-images.githubusercontent.com/94874302/160971081-9aa563d2-c603-483a-9493-cca841598ed6.png">
-
+<img width="990" alt="Screen Shot 2022-03-30 at 10 12 59 PM" src="https://user-images.githubusercontent.com/94874302/160981222-22415bed-0c9b-4434-ad42-a4bfbef6acd2.png">
 
 ## User Stories
 
-<img width="630" alt="Screen Shot 2022-03-30 at 8 33 50 PM" src="https://user-images.githubusercontent.com/94874302/160971165-482171ad-4859-423d-9681-3913a57b55e1.png">
+<img width="759" alt="Screen Shot 2022-03-30 at 10 15 46 PM" src="https://user-images.githubusercontent.com/94874302/160981503-19fdb717-395e-4f83-a1e8-5f7f2af0a9f6.png">
 
 
 ## Wire Frames
