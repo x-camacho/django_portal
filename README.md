@@ -1,5 +1,6 @@
 # Your Portal!
 
+Your Portal! is the one stop shop application to manage all of your locations in one location.  Add managers, locations, and reports to your growing business.  Keep track of your locations and who is responsible for them.  In addition, attach reports tied to each location for further review!
 
 ERD
 
