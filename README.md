@@ -12,12 +12,11 @@ Your Portal! is the one stop shop application to manage all of your locations in
 
 ## ERD
 
-<img width="990" alt="Screen Shot 2022-03-30 at 10 12 59 PM" src="https://user-images.githubusercontent.com/94874302/160981222-22415bed-0c9b-4434-ad42-a4bfbef6acd2.png">
+<img width="1053" alt="Screen Shot 2022-03-31 at 11 57 29 AM" src="https://user-images.githubusercontent.com/94874302/161129351-21b8accd-946c-40a5-b4d6-a2f1f3a3f0d8.png">
 
 ## User Stories
 
-<img width="759" alt="Screen Shot 2022-03-30 at 10 15 46 PM" src="https://user-images.githubusercontent.com/94874302/160981503-19fdb717-395e-4f83-a1e8-5f7f2af0a9f6.png">
-
+<img width="745" alt="Screen Shot 2022-03-31 at 11 52 20 AM" src="https://user-images.githubusercontent.com/94874302/161128534-f8cdc35e-8b9e-4759-a7e7-90bfbd4db8d4.png">
 
 ## Wire Frames
 
@@ -27,7 +26,8 @@ Your Portal! is the one stop shop application to manage all of your locations in
 
 <img width="886" alt="Screen Shot 2022-03-30 at 9 07 39 PM" src="https://user-images.githubusercontent.com/94874302/160974531-dc4803aa-fb61-4a2a-a95d-16f55f99bdb8.png">
 
-<img width="1027" alt="Screen Shot 2022-03-30 at 10 27 02 PM" src="https://user-images.githubusercontent.com/94874302/160982809-4afdb73b-1854-47d2-bb3f-db79757696a5.png">
+<img width="923" alt="Screen Shot 2022-03-31 at 11 48 23 AM" src="https://user-images.githubusercontent.com/94874302/161127914-0a05e50b-59fe-49a3-a0cf-d6c24e09144f.png">
+
 
 
 
