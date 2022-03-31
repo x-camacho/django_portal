@@ -21,12 +21,13 @@ Your Portal! is the one stop shop application to manage all of your locations in
 
 ## Wire Frames
 
-<img width="610" alt="Screen Shot 2022-03-30 at 9 06 15 PM" src="https://user-images.githubusercontent.com/94874302/160974416-a2c63d92-de85-4f38-873e-ec3c16236056.png">
-
-<img width="630" alt="Screen Shot 2022-03-30 at 9 10 32 PM" src="https://user-images.githubusercontent.com/94874302/160974835-e5e08efc-cddd-4136-8d72-7f8fedef3e4b.png">
+<img width="1086" alt="Screen Shot 2022-03-30 at 10 26 19 PM" src="https://user-images.githubusercontent.com/94874302/160982754-c988628f-f153-42d7-842d-46cd9a313389.png">
 
 <img width="541" alt="Screen Shot 2022-03-30 at 9 09 07 PM" src="https://user-images.githubusercontent.com/94874302/160974702-10f5d6a6-2ea1-4e3c-bb51-04947768abfa.png">
 
 <img width="886" alt="Screen Shot 2022-03-30 at 9 07 39 PM" src="https://user-images.githubusercontent.com/94874302/160974531-dc4803aa-fb61-4a2a-a95d-16f55f99bdb8.png">
+
+<img width="1027" alt="Screen Shot 2022-03-30 at 10 27 02 PM" src="https://user-images.githubusercontent.com/94874302/160982809-4afdb73b-1854-47d2-bb3f-db79757696a5.png">
+
 
 
