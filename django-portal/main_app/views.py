@@ -79,7 +79,7 @@ def reports_index(request):
     reports = Report.objects.all()
     return render(request, 'report_index.html', {'reports': reports})
 
-def cattoys_show(request, report_id):
+def reports_show(request, report_id):
     report = Report.objects.get(id=report_id)
     return render(request, 'report_show.html', {'report': report})
 

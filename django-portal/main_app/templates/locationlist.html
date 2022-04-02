@@ -2,23 +2,16 @@
 
 {% block content %}
 
-<form>
-    <div>
-        <input type="text" name="name" placeholder="name" />
-        <input type="text" value="Search" />
-    </div>
-    <a href="{% url 'location_create' %}">Add Location</a>
-    <a href="{% url 'location-list' %}">Clear Search</a>
-</form>
+
 <h1>{{header}}</h1>
     {% for location in locations %}
     <a href="{% url 'location_detail' location.pk %}">
-        <h3>Name {{location.name}}</h3>
+        <h3>{{location.name}}</h3>
     </a>
-        <h3>City {{location.city}}</h3>
-        <h3>State {{location.state}}</h3>
-        <p>Managed By: 
+        <h5>City: {{location.city}}</h5>
+        <h5>State: {{location.state}}</h5>
+        <h5>Managed By: 
             <a href='/user/{{location.user.username}}'>{{location.user.username}}</a>
-        </p>
+        </h5>
 {% endfor %}
 {% endblock %}

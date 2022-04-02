@@ -1,3 +1,40 @@
-h1 {
-    color: green;
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
 }
+
+.nav-container{
+    height: 3%;
+    display: flex;
+    padding: 3px;
+    /* margin-top: 1%;   */
+    height: 50px;
+    box-shadow:rgb(20, 45, 15);
+    background-color:rgb(15, 15, 15);
+    opacity: 0.6;
+    background-image:
+    linear-gradient(rgb(233, 227, 227), #222121)
+}
+
+.right-side{
+    flex: 30%;
+    }
+
+    .left-side{
+        padding: 1px;
+        text-decoration: none;
+        width: 1px;
+        flex: 80%;
+        margin: 1px;
+        justify-content: left;
+    }
+    .left-side, a{
+        font-size: 15px;
+        max-height: 80px;
+        margin: 5px ;
+        padding: 5px;
+        margin-left: 25px;
+        text-decoration: none;
+        flex-direction: right;
+    }
