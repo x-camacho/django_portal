@@ -1,0 +1,24 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<div>
+  <img src="{{cat.img}}" alt="{{cat.name}}" />
+</div>
+    <h1>{{cat.name}}</h1>
+</div>
+<div>
+    <h3>Age: {{cat.age}}</h3>
+    <h3>Gender: {{cat.gender}}</h3>
+</div>
+<div>
+    {% for cattoy in cat.cattoys.all %}
+        <div>{{cattoy.name}}</div>
+    {% empty %}
+        <div>Cat Has No Toys :(</div>
+    {% endfor %}
+    <a href="{% url 'cat_update' cat.pk %}">Update</a>
+    <a href="{% url 'cat_delete' cat.pk %}">Delete</a>
+</div>
+
+{% endblock %}

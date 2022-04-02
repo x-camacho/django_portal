@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form>
+    <div>
+        <input type="text" name="name" placeholder="name" />
+        <input type="text" value="Search" />
+    </div>
+    <a href="{% url 'cat_create' %}">Add Cat</a>
+    <a href="{% url 'cat-list' %}">Clear Search</a>
+</form>
+<h1>{{header}}</h1>
+    {% for cat in cats %}
+    <img src="{{cat.img}}" alt="{{cat.name}}">
+    <a href="{% url 'cat_detail' cat.pk %}">
+        <h3>Name {{cat.name}}</h3>
+    </a>
+        <h3>Age {{cat.age}}</h3>
+        <h3>Gender {{cat.gender}}</h3>
+        <p>Adopted By: 
+            <a href='/user/{{cat.user.username}}'>{{cat.user.username}}</a>
+        </p>
+{% endfor %}
+{% endblock %}

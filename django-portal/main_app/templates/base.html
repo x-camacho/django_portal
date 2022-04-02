@@ -5,13 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'styles/styles.css' %}" />
+    <!-- we can put any cdns, scripts, or css here -->
+    <!-- CDN Scripts -->
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
     <script src="{% static 'scripts/app.js' %}" defer></script>
-    <title>Portal</title>
+    <title>Django Cats</title>
 </head>
 <body>
-    {% block content %}  
+  <nav>
+    {% if user.is_authenticated %}
+    <span><a href="{% url 'profile' user.username %}">Hello, {{ user.username }}!</a></span>
+    <span> | </span>
+    <span><a href="{% url 'logout' %}">Logout</a></span>
+    <span> | </span>
+    {% else %}
+    <span><a href="{% url 'login' %}">Login</a></span>
+    <span> | </span>
+    <span><a href="{% url 'signup' %}">SignUp</a></span>
+    {% endif %}
+    <a href="/admin">Admin</a>
+    <span> | </span>
+    <a href="/">Home</a>
+    <span> | </span>
+    <a href="/about">About</a>
+    <span> | </span>
+    <a href="/cats">Cats</a>
+    <span> | </span>
+    <a href="/cattoys">Cat Toys</a>
+    <span> | </span>
+    <a href="{% url 'cat_create' %}">Add a Cat</a>
+    <span> | </span>
+    <a href="{% url 'cattoys_create' %}">Add a CatToy</a>
+    <span> | </span>
+</nav>
+  {% block content %}  
 
-    {% endblock %}
+  {% endblock %}
 </body>
 </html>
