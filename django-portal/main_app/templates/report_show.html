@@ -5,18 +5,17 @@
 
 <div>
     <div>
-        <span>{{ cattoy.name }}</span>
-        <p>Color: {{ cattoy.color }}</p>
+        <span>{{ report.name }}</span>
         <p>Owned by:</p>
-        {% for cat in cattoy.cat_set.all %}
-            <p>{{cat.name}}</p>
+        {% for report in report.location_set.all %}
+            <p>{{location.name}}</p>
         {% empty %}
-            <p>Nobody Has This Toy</p>
+            <p>No Report Found</p>
         {% endfor %}
     </div>
     <div>
-        <a href="{% url 'cattoys_update' cattoy.id %}">Edit</a>
-        <a href="{% url 'cattoys_delete' cattoy.id %}">Delete</a>
+        <a href="{% url 'reports_update' report.id %}">Edit</a>
+        <a href="{% url 'reports_delete' report.id %}">Delete</a>
     </div>
 </div>
 {% endblock %}

@@ -91,7 +91,7 @@ class ReportCreate(CreateView):
     success_url = '/reports'
 
 @method_decorator(login_required, name='dispatch')
-class CatToyUpdate(UpdateView):
+class ReportUpdate(UpdateView):
     model = Report
     fields = '__all__'
     template_name = "report_update.html"
