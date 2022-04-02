@@ -9,7 +9,7 @@
     <!-- CDN Scripts -->
     <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
     <script src="{% static 'scripts/app.js' %}" defer></script>
-    <title>Django Cats</title>
+    <title>Portal</title>
 </head>
 <body>
   <nav>
@@ -27,15 +27,13 @@
     <span> | </span>
     <a href="/">Home</a>
     <span> | </span>
-    <a href="/about">About</a>
+    <a href="/locations">Locations</a>
     <span> | </span>
-    <a href="/cats">Cats</a>
+    <a href="/reports">Reports</a>
     <span> | </span>
-    <a href="/cattoys">Cat Toys</a>
+    <a href="{% url 'location_create' %}">Add a Location</a>
     <span> | </span>
-    <a href="{% url 'cat_create' %}">Add a Cat</a>
-    <span> | </span>
-    <a href="{% url 'cattoys_create' %}">Add a CatToy</a>
+    <a href="{% url 'reports_create' %}">Add a Report</a>
     <span> | </span>
 </nav>
   {% block content %}  

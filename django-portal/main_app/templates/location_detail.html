@@ -2,23 +2,20 @@
 
 {% block content %}
 
-<div>
-  <img src="{{cat.img}}" alt="{{cat.name}}" />
-</div>
-    <h1>{{cat.name}}</h1>
+    <h1>{{location.name}}</h1>
 </div>
 <div>
-    <h3>Age: {{cat.age}}</h3>
-    <h3>Gender: {{cat.gender}}</h3>
+    <h3>City: {{location.city}}</h3>
+    <h3>State: {{location.state}}</h3>
 </div>
 <div>
-    {% for cattoy in cat.cattoys.all %}
-        <div>{{cattoy.name}}</div>
+    {% for report in location.reports.all %}
+        <div>{{report.name}}</div>
     {% empty %}
-        <div>Cat Has No Toys :(</div>
+        <div>Currently no reports exist for this location.</div>
     {% endfor %}
-    <a href="{% url 'cat_update' cat.pk %}">Update</a>
-    <a href="{% url 'cat_delete' cat.pk %}">Delete</a>
+    <a href="{% url 'location_update' location.pk %}">Update</a>
+    <a href="{% url 'location_delete' location.pk %}">Delete</a>
 </div>
 
 {% endblock %}

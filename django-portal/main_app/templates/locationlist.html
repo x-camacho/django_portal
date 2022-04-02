@@ -7,19 +7,18 @@
         <input type="text" name="name" placeholder="name" />
         <input type="text" value="Search" />
     </div>
-    <a href="{% url 'cat_create' %}">Add Cat</a>
-    <a href="{% url 'cat-list' %}">Clear Search</a>
+    <a href="{% url 'location_create' %}">Add Location</a>
+    <a href="{% url 'location-list' %}">Clear Search</a>
 </form>
 <h1>{{header}}</h1>
-    {% for cat in cats %}
-    <img src="{{cat.img}}" alt="{{cat.name}}">
-    <a href="{% url 'cat_detail' cat.pk %}">
-        <h3>Name {{cat.name}}</h3>
+    {% for location in locations %}
+    <a href="{% url 'location_detail' location.pk %}">
+        <h3>Name {{location.name}}</h3>
     </a>
-        <h3>Age {{cat.age}}</h3>
-        <h3>Gender {{cat.gender}}</h3>
-        <p>Adopted By: 
-            <a href='/user/{{cat.user.username}}'>{{cat.user.username}}</a>
+        <h3>City {{location.city}}</h3>
+        <h3>State {{location.state}}</h3>
+        <p>Managed By: 
+            <a href='/user/{{location.user.username}}'>{{location.user.username}}</a>
         </p>
 {% endfor %}
 {% endblock %}

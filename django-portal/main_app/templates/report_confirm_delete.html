@@ -2,13 +2,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Delete Cat Toy</h1>
+    <h1>Delete Report</h1>
 
-    <h4>Are you sure you want to delete <strong>{{ cattoy }}</strong>?</h4>
+    <h4>Are you sure you want to delete <strong>{{ report }}</strong>?</h4>
 
     <form action="" method="POST">
         {% csrf_token %}
         <input type="submit" value="Yes - Delete!">
-        <a href="{% url 'cattoys_show' cattoy.id %}">Cancel</a>
+        <a href="{% url 'reports_show' report.id %}">Cancel</a>
     </form>
 {% endblock %}
