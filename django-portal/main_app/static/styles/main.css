@@ -17,22 +17,27 @@ body{
     linear-gradient(rgb(233, 227, 227), #222121)
 }
 
-.right-side{
-    flex: 30%;
+.left-side{
+    flex: 40%;
     }
+.left-side, a{
+    margin-top: 1%;
+}
 
-    .left-side{
+    .right-side{
         padding: 1px;
         text-decoration: none;
         width: 1px;
-        flex: 80%;
+        flex: 70%;
+        margin-top: 1%;
         margin: 1px;
         justify-content: left;
     }
-    .left-side, a{
+    .right-side, a{
         font-size: 15px;
         max-height: 80px;
-        margin: 5px ;
+        margin: 5px;
+        margin-top: 1%;
         padding: 5px;
         margin-left: 25px;
         text-decoration: none;

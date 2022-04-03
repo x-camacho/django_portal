@@ -9,13 +9,16 @@
     <h3>State: {{location.state}}</h3>
 </div>
 <div>
+    Mdiv
     {% for report in location.reports.all %}
-        <div>{{report.name}}</div>
+    <a href="{% url 'reports_show' report.pk %}">{{report.name}}</a>
     {% empty %}
         <div>Currently no reports exist for this location.</div>
     {% endfor %}
-    <a href="{% url 'location_update' location.pk %}">Update</a>
-    <a href="{% url 'location_delete' location.pk %}">Delete</a>
+    <div>
+        <a href="{% url 'location_update' location.pk %}">Update</a>
+        <a href="{% url 'location_delete' location.pk %}">Delete</a>
+    </div>
 </div>
 
 {% endblock %}
