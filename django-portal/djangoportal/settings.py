@@ -98,7 +98,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'djangoportal.wsgi.application'
+WSGI_APPLICATION = 'django-portal.wsgi.application'
 
 
 # Database
