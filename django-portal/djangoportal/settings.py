@@ -18,8 +18,8 @@ import socket
 import psycopg2
 import dj_database_url
 
-DATABASE_URL = os.environ['DATABASE_URL']
-conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+DATABASE_URL = os.environ['DATABASE_URL'] #---------------------------------------->
+conn = psycopg2.connect(DATABASE_URL, sslmode='require') #---------------------------------------->
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
@@ -49,7 +49,7 @@ SECRET_KEY = str(os.getenv("SECRET_KEY"))
 # DEBUG = True
 
 ALLOWED_HOSTS = [
-    'django-portal.herokuapp.com'
+    'django-portal.herokuapp.com' #----------------------------------------> COMMENT OUT
 ]
 
 
@@ -63,7 +63,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main_app',
-    'crispy-forms'
+    'crispy_forms'
 
 ]
 
@@ -100,7 +100,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'django-portal.wsgi.application'
+WSGI_APPLICATION = 'djangoportal.wsgi.application'
 
 
 # Database
@@ -112,7 +112,7 @@ DATABASES = {
         'NAME': 'portal',
     }
 }
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True) #---------------------------------------->
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -151,7 +151,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
-LOGIN_URL = '/login/'
+LOGIN_URL = '/login' #---------------------------------------->COMMENT THIS OUT WHEN GOING LOCAL
 LOGIN_REDIRECT_URL = '/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
