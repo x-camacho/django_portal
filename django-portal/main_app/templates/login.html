@@ -1,14 +1,33 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load widget_tweaks %}
 
 {% block content %}
-
+<div class="login-box">
 <h1>Login</h1>
-<form action="" method="post">
-    {% csrf_token %}
-    {{form.as_p}}
 
-    <input type="submit" value="Sign Up">
-</form>
-
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="user-box">
+                    Username
+                   <label for=""></label>{{form.username}}
+                   </div>
+                <div class="user-box">
+                    Password
+                    <label for=""></label>{{form.password}}
+                    <!-- {% if form.errors %}
+                    <p>Please Try Again!</p>
+                    {% endif %} -->
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <input type="submit" value="Login"></a>
+                {% if form.errors %}
+                <p class="errorMsg">Please Try Again!</p>
+                {% endif %}
+            </form>
+            </div>
+        </div>
 {% endblock %}

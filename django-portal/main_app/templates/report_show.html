@@ -4,7 +4,7 @@
 <h1> Details</h1>
 
 <div>
-    <div>
+    <div class="card">
         <span>{{ report.name }}</span>
         <p>Owned by:</p>
         <h5>Description: {{ report.description }}</h5>
@@ -17,10 +17,10 @@
         {% empty %}
             <p>No Report Found</p>
         {% endfor %}
-    </div>
     <div>
         <a href="{% url 'reports_update' report.id %}">Edit</a>
         <a href="{% url 'reports_delete' report.id %}">Delete</a>
+     </div>
     </div>
 </div>
 {% endblock %}

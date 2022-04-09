@@ -4,7 +4,7 @@
 <h1>Report List</h1>
 
 {% for report in reports %}
-    <div>
+    <div class="card">
         <a href="{% url 'reports_show' report.id %}">
             <div class="card-content">
                 <span>{{ report.name }}</span>

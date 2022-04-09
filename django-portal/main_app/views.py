@@ -45,7 +45,7 @@ class LocationCreate(CreateView):
 
     def form_valid(self, form):
         self.object = form.save(commit=False)
-        self.object.user = self.request.user
+        # self.object.user = self.request.user
         self.object.save()
         return HttpResponseRedirect('/locations')
 
@@ -116,17 +116,18 @@ def login_view(request):
                     login(request, user)
                     return HttpResponseRedirect('/user/'+u)
                 else:
-                    print('The account has been disabled')
-
+                    return render(request, 'login.html', {'form': form})
             else:
-                print('The username and/or password is incorrect, please try again!')
+                return render(request, 'login.html', {'form': form})
+        else: 
+            return render(request, 'login.html', {'form': form})
     else:
         form = AuthenticationForm()
-        return render(request, 'login.html', {'form': form})
+        return render(request, 'login.html', {'form': form})    
 
 def logout_view(request):
     logout(request)
-    return HttpResponseRedirect('/locations')
+    return HttpResponseRedirect('/')
 
 def signup_view(request):
     if request.method == 'POST':
@@ -134,10 +135,10 @@ def signup_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            print('Hey', user.username)
+            print('HEY', user.username)
             return HttpResponseRedirect('/user/'+str(user))
         else:
-            HttpResponse('<h1>Try Again!</h1>')
+            return render(request, 'signup.html', {'form': form})
     else:
         form = UserCreationForm()
         return render(request, 'signup.html', {'form': form})

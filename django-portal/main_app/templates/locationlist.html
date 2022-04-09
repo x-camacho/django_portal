@@ -5,13 +5,16 @@
 
 <h1>{{header}}</h1>
     {% for location in locations %}
+    <div class="card">
     <a href="{% url 'location_detail' location.pk %}">
         <h3>{{location.name}}</h3>
     </a>
+        <h5>Store Number: {{location.location_number}}</h5>
         <h5>City: {{location.city}}</h5>
         <h5>State: {{location.state}}</h5>
         <h5>Managed By: 
             <a href='/user/{{location.user.username}}'>{{location.user.username}}</a>
         </h5>
+    </div>
 {% endfor %}
 {% endblock %}

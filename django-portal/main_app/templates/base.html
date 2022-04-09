@@ -6,40 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
     <script src="{% static 'scripts/app.js' %}" defer></script>
     <title>Portal</title>
 </head>
 <body>
-  <nav class="nav-container">
-    <div class="right-side">
-      <a href="/admin">Admin</a>
-      <a href="/">Home</a>
-      <a href="/locations">Locations</a>
-      <a href="/reports">Reports</a>
-      <a href="{% url 'location_create' %}">Add a Location</a>
-      <a href="{% url 'reports_create' %}">Add a Report</a>
-      <!-- <span><a href="{% url 'profile' user.username %}">Hello, {{ user.username }}!</a></span>
-      <span><a href="{% url 'logout' %}">Logout</a></span> -->
-    </div>
-    <div class="left-side">
-    {% if user.is_authenticated %}
-    <span><a href="{% url 'profile' user.username %}">Hello, {{ user.username }}!</a></span>
-    <span><a href="{% url 'logout' %}">Logout</a></span>
-    {% else %}
-    <span><a href="{% url 'login' %}">Login</a></span>
-    <span><a href="{% url 'signup' %}">SignUp</a></span>
-    {% endif %}
-    <!-- <a href="/admin">Admin</a>
-    <a href="/">Home</a>
-    <a href="/locations">Locations</a>
-    <a href="/reports">Reports</a>
-    <a href="{% url 'location_create' %}">Add a Location</a>
-    <a href="{% url 'reports_create' %}">Add a Report</a> -->
-    </div>
-</nav>
-
+      <nav class="stroke">
+      {% if user.is_authenticated %}
+      <ul>
+        <li><a href="{% url 'profile' user.username %}">Hello, {{ user.username }}!</a></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+        <li><a href="/admin">Admin Menu</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/locations">Locations</a></li>
+        <li><a href="/reports">Reports</a></li>
+        <li><a href="{% url 'location_create' %}">Add a Location</a></li>
+        <li><a href="{% url 'reports_create' %}">Add a Report</a></li>
+      </ul>
+      {% else %}
+        <ul>
+          <li><a href="{% url 'login' %}">Login</a></li>
+          <li><a href="{% url 'signup' %}">SignUp</a></li>
+        </ul>
+      </div>
+      {% endif %}
+  </nav>
+</section>
   {% block content %}  
-
   {% endblock %}
 </body>
 </html>

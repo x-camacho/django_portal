@@ -3,7 +3,13 @@
 
 {% block content %}
 
-<h1>{{ username }}'s Locations:</h1>
+<h1>{{ username }}'s Home Page:</h1>
+
+<!-- <h3>{% for user in locations %}</h3>
+    <a href="/user/{{ user.id }}">
+        <h3>{{ location.user }}</h3>
+    </a>
+{% endfor %} -->
 
 {% for location in locations %}
     <a href="/locations/{{ location.id }}">

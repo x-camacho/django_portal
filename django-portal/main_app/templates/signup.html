@@ -2,13 +2,28 @@
 {% load static %}
 
 {% block content %}
-
+<div class="login-box">
 <h1>Sign Up</h1>
-<form action="" method="post">
-    {% csrf_token %}
-    {{form.as_p}}
-
-    <input type="submit" value="Sign Up">
-</form>
+<div class="user-box">
+    <form action="" method="post">
+        {% csrf_token %}
+        Username:
+        <label for="Username"></label>{{form.username}}
+        Password:
+        <label for="Password"></label>{{form.password1}}
+        Confirm Password:
+        <label for="Confirm Password"></label>{{form.password2}}
+        <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <input type="submit" value="SignUp">
+        </a>
+        {% if form.errors %}
+        <p class="errorMsg">Please re-enter your Username and confirm password matches</p>
+        {% endif %}
+    </form>
+</div>
 
 {% endblock %}

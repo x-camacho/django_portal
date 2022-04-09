@@ -8,12 +8,14 @@ REVIEW_CHOICES = {
     ("N", "No")
 }
 
+
+
 class Report(models.Model):
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=300)
     cadence = models.CharField(max_length=50)
     date = models.DateField(max_length=100)
-    notes = models.CharField(max_length=300)
+    notes = models.TextField(max_length=300)
     reviewed = models.CharField(max_length=10, choices = REVIEW_CHOICES)
     created_at = models.DateField(auto_now_add=True)
 
