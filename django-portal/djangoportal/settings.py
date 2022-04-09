@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
+import socket
+import psycopg2
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -18,14 +22,35 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
+DATABASE_URL = os.environ['DATABASE_URL']
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+# If the host name starts with 'live', DJANGO_HOST = "production"
+if socket.gethostname().startswith('live'):
+    DJANGO_HOST = "production"
+# Else if host name starts with 'test', set DJANGO_HOST = "test"
+elif socket.gethostname().startswith('test'): 
+    DJANGO_HOST = "testing"
+else:
+# If host doesn't match, assume it's a development server, set DJANGO_HOST = "development"
+    DJANGO_HOST = "development"
+# Define general behavior variables for DJANGO_HOST and all others
+if DJANGO_HOST == "production":
+    DEBUG = False
+    STATIC_URL = 'https://infinite-ravine-34596.herokuapp.com/'
+else:
+    DEBUG = True
+    STATIC_URL = '/static/'
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-mk(5ntqy@_-6)_+v%38hfpkrhyuu17#)_wlq+-=+!l^%c5ensf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'django-portal.herokuapp.com'
+]
 
 
 # Application definition
@@ -52,6 +77,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 ROOT_URLCONF = 'djangoportal.urls'
@@ -59,7 +87,7 @@ ROOT_URLCONF = 'djangoportal.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': '/www/STORE/main_app/templates/',
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,12 +106,15 @@ WSGI_APPLICATION = 'djangoportal.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'portal',
-    }
-}
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'portal',
+#     }
+# }
+
 
 
 # Password validation
@@ -121,7 +152,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
+LOGIN_REDIRECT_URL = '/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
