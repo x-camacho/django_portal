@@ -18,8 +18,6 @@ import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 DATABASE_URL = os.environ['DATABASE_URL']
@@ -36,7 +34,7 @@ else:
 # Define general behavior variables for DJANGO_HOST and all others
 if DJANGO_HOST == "production":
     DEBUG = False
-    STATIC_URL = 'https://infinite-ravine-34596.herokuapp.com/'
+    STATIC_URL = 'https://django-portal.herokuapp.com/'
 else:
     DEBUG = True
     STATIC_URL = '/static/'
@@ -64,13 +62,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main_app',
     'crispy_forms',
-
 ]
 
 # CRISPY_TEMPLATE_PACK = 'uni_form'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -106,16 +104,13 @@ WSGI_APPLICATION = 'djangoportal.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'portal',
+    }
+}
 DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'portal',
-#     }
-# }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
