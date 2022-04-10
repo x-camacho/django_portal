@@ -52,7 +52,6 @@ ALLOWED_HOSTS = [
     'django-portal.herokuapp.com' #----------------------------------------> COMMENT OUT
 ]
 
-
 # Application definition
 
 INSTALLED_APPS = [
