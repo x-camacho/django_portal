@@ -11,9 +11,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os 
-load_dotenv()
+# load_dotenv()
 import socket
 import psycopg2
 import dj_database_url
